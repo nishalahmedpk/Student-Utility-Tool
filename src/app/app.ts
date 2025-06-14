@@ -1,9 +1,14 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { Cgpa } from './cgpa/cgpa';
+import { Header } from './header/header';
+import { Notes } from './notes/notes';
+
+
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet,Cgpa,Header,Notes],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

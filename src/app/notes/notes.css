@@ -1,0 +1,15 @@
+.addnotes {
+    margin: 8px;
+    background-color: black;
+    color: white;
+    padding: 8px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.note-item {
+    margin: 8px;
+    padding: 8px;
+    border-radius: 5px;
+    border: solid black;
+}

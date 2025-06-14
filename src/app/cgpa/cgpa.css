@@ -1,0 +1,42 @@
+.cgpa {
+    margin: 8px;
+    background-color: black;
+    color: white;
+    padding: 8px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.semester {
+    margin: 8px;
+    padding: 8px;
+    border-radius: 5px;
+    border: solid black;
+}
+
+.subject {
+    margin: 8px 0px;
+    background-color: rgb(49, 49, 49);
+    color: white;
+    padding: 8px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.subject input {
+    min-width: 0;
+    width: auto;
+    flex: unset;
+}
+
+button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.addsem {
+    margin-bottom: 8px;
+}
