@@ -48,21 +48,38 @@ export class Cgpa {
     return grade/credits;
   }
 
+  addSubject(sem: Semester) {
+    const index = this.semesters.indexOf(sem);
+    if (index !== -1) {
+      this.semesters[index].subjects.push({ name: '', credits: 0, grade: '' });
+    }
+  }
+
+  removeSubject(sem: Semester, subject: { name: string, credits: number, grade: string }) {
+    const index = this.semesters.indexOf(sem);
+    const subjectIndex = this.semesters[index].subjects.indexOf(subject);
+    if (index !== -1 && subjectIndex >= 0 && subjectIndex < this.semesters[index].subjects.length) {
+      this.semesters[index].subjects.splice(subjectIndex, 1);
+    }
+  }
+
+  addSemester() {
+    this.semesters.push({ semName: `Semester ${this.semesters.length + 1}`, subjects: [] });
+  }
+
+  removeSemester(sem: Semester) {
+    const index = this.semesters.indexOf(sem);
+    if (index !== -1) {
+      this.semesters.splice(index, 1);
+    }
+  }
+
+
   semesters: Semester[] = [
     {
       semName: 'Semester 1',
       subjects: [
-        { name: 'Mathematics', credits: 4, grade: 'A' },
-        { name: 'Physics', credits: 3, grade: 'B' },
-        { name: 'Chemistry', credits: 3, grade: 'A-' }
-      ]
-    },
-    {
-      semName: 'Semester 2',
-      subjects: [
-        { name: 'Biology', credits: 3, grade: 'B' },
-        { name: 'English', credits: 2, grade: 'A' },
-        { name: 'Computer Science', credits: 4, grade: 'A-' }
+        { name: '', credits: 0, grade: '' }
       ]
     }
   ];

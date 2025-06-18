@@ -1,9 +1,15 @@
-<div class="addnotes">
-    <button class="nil"><h2>Add Notes</h2></button>
-</div>
+<a [routerLink]="['/note/new']">
+    <div class="addnotes">
+        <h1>Add Notes</h1>
+    </div>
+</a>
 <div class="notes">
-<div *ngFor="let note of notesarr" class="note-item">
-    <h3>{{ note.notesTitle }}</h3>
-    <p>By: {{ note.author }}</p>
+<div *ngFor="let note of notesarr">
+    <a [routerLink]="['/note',note.id]">
+        <div class="note-item">
+            <h3>{{ note.notesTitle }}</h3>
+            <p>By: {{ note.author }}</p>
+        </div>
+    </a>
 </div>
 </div>

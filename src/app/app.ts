@@ -8,7 +8,7 @@ import { Notes } from './notes/notes';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,Cgpa,Header,Notes],
+  imports: [RouterOutlet,Cgpa,Header],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

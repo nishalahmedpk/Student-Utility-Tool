@@ -1,4 +1,4 @@
-/* Global reset */
+/* Global Reset */
 * {
   margin: 0;
   padding: 0;
@@ -7,47 +7,59 @@
 }
 
 html, body {
-  margin: 0;
-  padding: 0;
   width: 100%;
   height: 100%;
+  overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
+/* Header styling */
 .head {
-    background-color: black;
-    padding: 5px;
-    text-align: center;
-    border-radius: 5px;
+  background-color: black;
+  padding: 5px;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
 }
 
-body {
-  overflow-x: hidden; /* Optional: Removes horizontal scrollbar if exists */
-}
-
-/* Specific to Angular */
+/* Angular root component */
 app-root {
   display: block;
-  margin: 0;
-  padding: 0;
   width: 100%;
   height: 100%;
 }
 
+/* Container for items */
 .things {
-    display: flex;
-    flex-direction: row;
-    gap: 16px;
-    flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 16px;
 }
 
+/* Each item in the container */
 .things > div {
-    flex: 1 1 300px;
-    min-width: 250px;
+  flex: 1 1 300px;
+  min-width: 250px;
 }
 
+/* Individual 'thing' styling */
 .thing {
-    border: solid black; 
-    margin-top: 10px;
-    border-radius: 5px;
-    min-height: 80vh;
+  border: solid black;
+  border-radius: 5px;
+  margin-top: 10px;
+  min-height: 80vh;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+/* Responsive: Stack vertically and fully expand 'thing' height on small screens */
+@media (max-width: 768px) {
+  .things {
+    flex-direction: column;
+  }
+
+  .thing {
+    max-height: none;
+    height: auto;
+  }
 }

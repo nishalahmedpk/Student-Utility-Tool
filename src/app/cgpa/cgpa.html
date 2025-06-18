@@ -1,11 +1,12 @@
 <div class="cgpa">
-    <h2>C. GPA = {{cgpa()}}</h2>
+    <h2>C. GPA = {{cgpa()|number:'1.2-2'}}</h2>
 </div>
 <div class="semesters">
     <div *ngFor="let semester of semesters" class="semester">
         <div style="display: flex; justify-content: space-between; align-items: center;">
             <p style="font-weight: bold; margin: 0;">{{semester.semName}}</p>
-            <p style="margin: 0;">S. GPA {{gpa(semester)}}</p>
+            <p style="margin: 0;">S. GPA {{gpa(semester)|number:'1.2-2'}}</p>
+            <button (click)="removeSemester(semester)">Remove Semester</button>
         </div>
         <div class="subject" *ngFor="let subject of semester.subjects">
             <input type="text" [(ngModel)]="subject.name" placeholder="Subject" style="flex: 2;">
@@ -22,8 +23,9 @@
                 <option value="D-">D-</option>
                 <option value="F">F</option>
             </select>
+            <button (click)="removeSubject(semester, subject)">Remove</button>
         </div>
-        <button>Add Subject</button>
+        <button (click)="addSubject(semester)">Add Subject</button>
     </div>
-    <button class="addsem">Add Semester</button>
+    <button class="addsem" (click)="addSemester()">Add Semester</button>
 </div>
