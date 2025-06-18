@@ -2,11 +2,14 @@
     <h2>C. GPA = {{cgpa()|number:'1.2-2'}}</h2>
 </div>
 <div class="semesters">
-    <div *ngFor="let semester of semesters" class="semester">
-        <div style="display: flex; justify-content: space-between; align-items: center;">
-            <p style="font-weight: bold; margin: 0;">{{semester.semName}}</p>
-            <p style="margin: 0;">S. GPA {{gpa(semester)|number:'1.2-2'}}</p>
-            <button (click)="removeSemester(semester)">Remove Semester</button>
+    <div *ngFor="let semester of semesters" class="semester list-item">
+        <div>
+<div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+  <p style="font-weight: bold; margin: 0;">{{semester.semName}}</p>
+  <button (click)="removeSemester(semester)" class="delete" style="margin-left: auto;">X</button>
+</div>
+
+            <p>S. GPA {{gpa(semester)|number:'1.2-2'}}</p>
         </div>
         <div class="subject" *ngFor="let subject of semester.subjects">
             <input type="text" [(ngModel)]="subject.name" placeholder="Subject" style="flex: 2;">
@@ -23,9 +26,11 @@
                 <option value="D-">D-</option>
                 <option value="F">F</option>
             </select>
-            <button (click)="removeSubject(semester, subject)">Remove</button>
+            <button (click)="removeSubject(semester, subject)" class="delete">X</button>
         </div>
-        <button (click)="addSubject(semester)">Add Subject</button>
+        <button (click)="addSubject(semester)" class="addthing">+ Subject</button>
     </div>
-    <button class="addsem" (click)="addSemester()">Add Semester</button>
+    <div style="display: flex; justify-content: center;">
+        <button class="addthing addsem" (click)="addSemester()" style="margin: 8px; width: 95%; background-color: #EFE4D2; color: #254D70;">+ Semester</button>
+    </div>
 </div>

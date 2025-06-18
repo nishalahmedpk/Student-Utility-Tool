@@ -1,25 +1,16 @@
 .cgpa {
-    margin: 8px;
-    background-color: black;
+    background-color: #254D70;
     color: white;
     padding: 8px;
     text-align: center;
-    border-radius: 5px;
+    border-radius: 0px 0px 10px 10px;
 }
-
-.semester {
-    margin: 8px;
-    padding: 8px;
-    border-radius: 5px;
-    border: solid black;
-}
-
 .subject {
     margin: 8px 0px;
-    background-color: rgb(49, 49, 49);
+    background-color: #131d4f;
     color: white;
     padding: 8px;
-    border-radius: 5px;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     gap: 8px;
@@ -29,14 +20,30 @@
     min-width: 0;
     width: auto;
     flex: unset;
+    border: none;
+    outline: none;
+    background: none;
+    box-shadow: none;
+    color: #EFE4D2;
 }
 
-button {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+.subject button {
+    background: none;
+    color:  red;
 }
 
-.addsem {
-    margin-bottom: 8px;
+.subject select {
+    min-width: 0;
+    width: auto;
+    flex: unset;
+    border: none;
+    outline: none;
+    background: none;
+    box-shadow: none;
+    color: #EFE4D2;
+}
+
+.addsem:hover {
+    background-color: #254D70;
+    color: #EFE4D2;
 }

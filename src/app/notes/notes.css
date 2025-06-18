@@ -1,15 +1,23 @@
 .addnotes {
-    margin: 8px;
-    background-color: black;
+ 
+    background-color: #254D70;
     color: white;
     padding: 8px;
     text-align: center;
-    border-radius: 5px;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.addnotes:hover {
+    background-color: #1A3A5B;
+    color: #EFE4D2;
 }
 
 .note-item {
-    margin: 8px;
-    padding: 8px;
-    border-radius: 5px;
-    border: solid black;
+    padding: 20px;
+}
+
+.note-item:hover {
+    color: #EFE4D2;
+    background-color: #254D70;
+
 }

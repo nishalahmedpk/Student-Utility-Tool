@@ -1,32 +1,3 @@
-/* Global Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-html, body {
-  width: 100%;
-  height: 100%;
-  overflow-x: hidden; /* Prevent horizontal scroll */
-}
-
-/* Header styling */
-.head {
-  background-color: black;
-  padding: 5px;
-  text-align: center;
-  border-radius: 5px;
-  color: white;
-}
-
-/* Angular root component */
-app-root {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
 
 /* Container for items */
 .things {
@@ -34,6 +5,7 @@ app-root {
   flex-direction: row;
   flex-wrap: wrap;
   gap: 16px;
+  margin: 5px 10px;
 }
 
 /* Each item in the container */
@@ -44,12 +16,14 @@ app-root {
 
 /* Individual 'thing' styling */
 .thing {
-  border: solid black;
-  border-radius: 5px;
+  /* border: 3px solid #254D70; */
+  border-radius: 10px;
   margin-top: 10px;
-  min-height: 80vh;
-  max-height: 80vh;
+  min-height: 85vh;
+  max-height: 85vh;
   overflow-y: auto;
+  /* background-color: #EFE4D2; */
+  background-color: #954C2E;
 }
 
 /* Responsive: Stack vertically and fully expand 'thing' height on small screens */

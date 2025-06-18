@@ -10,12 +10,22 @@ import { FormsModule } from '@angular/forms';
   imports: [FormsModule,RouterModule],
   template: `
     <div class="onenote-container">
-      <input [(ngModel)]="thenote.notesTitle" placeholder="Title" />
+    <div class="toppp" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+      <input [(ngModel)]="thenote.notesTitle" placeholder="Title"/>
+      <a [routerLink]="['/']" class="delete">x</a>
+    </div>
+    <div class="toolbar" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
       <button (click)="saveNote()">Save</button>
       <button (click)="deleteNote()">Delete</button>
-      <a [routerLink]="['/']">Back</a>
-      <h2>Author: {{ thenote.author }}</h2>
+      
+    </div>
+
+    
+    
+    <div class="texthingy">
       <textarea [(ngModel)]="thenote.notes" rows="10" cols="50"></textarea>
+    </div>
+    <p>Author: {{ thenote.author }}</p>
     </div>
   `,
   styleUrl: './onenote.css'
